@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.onlinemusic.mapper.MusicMapper">
+    <!-- 插入 -->
+    <insert id="insert">
+        insert into music(title,singer,time,url,userid)
+        values(#{title},#{singer},#{time},#{url},#{userid});
+    </insert>
+
+   <!--查重-->
+    <select id="select" resultType="com.example.onlinemusic.model.Music">
+        select * from music where title = #{title}  ;
+    </select>
+
+    <!--//查找音乐-->
+    <select id="findMusicById" resultType="com.example.onlinemusic.model.Music">
+        select * from music where id = #{id}  ;
+    </select>
+
+    <!--//删除音乐-->
+    <delete id="deleteMusicById" parameterType="java.lang.Integer">
+        delete from music where id=#{id};
+    </delete>
+
+    <select id="findMusicByMusicName" resultType="com.example.onlinemusic.model.Music">
+        select * from music where title like concat('%',#{musicName},'%') <!--模糊查询-->;
+    </select>
+
+    <select id="findMusic" resultType="com.example.onlinemusic.model.Music">
+        select * from music;
+    </select>
+
+</mapper>

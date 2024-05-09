@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    //$(function(){
+    $(document).ready(function(){
+      $("button").click(function(){
+        alert($("#bit").attr("href"));
+      });
+    });
+  </script>
+</head>
+<body>
+<p><a href="www.bit.com" id="bit">www.bit.com</a></p>
+<button>显示 href 值</button>
+</body>
+</html>

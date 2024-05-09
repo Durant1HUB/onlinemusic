@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("images/1.4.jpg");
+            background-size: cover;
+        }
+
+        form {
+            width: 350px; /* 设置表单宽度 */
+            height: 170px; /* 设置表单高度 */
+            background-color: rgba(255, 255, 255, 0.8); /* 设置表单背景为半透明白色 */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+        }
+
+        form input[type="file"],
+        form input[type="text"] {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data" action="/music/upload">
+    <div class="title">上传歌曲</div>
+    <div>文件上传：<input type="file" name="filename"/></div>
+
+    <div>歌手名: <input type="text" name="singer" placeholder="请输入歌手名"/>   <input type="submit" value="上传"/></div>
+</form>
+</body>
+</html>
