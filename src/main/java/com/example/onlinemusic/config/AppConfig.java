@@ -6,11 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * @Author 12629
- * @Date 2022/4/11 17:22
- * @Description：
- */
+
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
 
